@@ -5,19 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda con Animación en Imágenes</title>
     <style>
-        /* Contenedor de la cuadrícula */
-        .grid-container {
+                        /* Fondo por defecto para pantallas grandes */
+                        body {
+                background-image: url('Fondo.png')
+        }
+
+        /* Fondo para pantallas móviles */
+        @media only screen and (max-width: 768px) {
+            body {
+                background-image: url('Fondo1.png')
+            }
+        }
+         /* Contenedor de la cuadrícula */
+         .grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-            gap: 20px;
-            max-width: 600px;
+            gap: 30px; /* Aumentar el espacio entre las imágenes */
+            max-width: 800px; /* Ajusta el tamaño máximo */
             margin: 0 auto;
             padding: 20px;
         }
 
         /* Estilo de las imágenes */
         .grid-item img {
-            width: 100%;
+            width: 100%; /* Ajusta el ancho al 100% del contenedor */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -26,7 +37,7 @@
             animation: slideUp 0.8s ease-out forwards; /* Aplicar animación */
         }
 
-        /* Delay para cada imagen, para que entren una tras otra */
+        /* Delay para cada imagen */
         .grid-item:nth-child(1) img { animation-delay: 0.2s; }
         .grid-item:nth-child(2) img { animation-delay: 0.4s; }
         .grid-item:nth-child(3) img { animation-delay: 0.6s; }
@@ -43,12 +54,11 @@
 </head>
 <body>
 
-    <h1>Tienda de Productos</h1>
     <div class="grid-container">
-        <div class="grid-item"><img src="FFP.png" alt="FFP"></div>
-        <div class="grid-item"><img src="economiafeudal.png" alt="economiafeudal"></div>
-        <div class="grid-item"><img src="sociedad feudal.png" alt="sociedad feudal"></div>
-        <div class="grid-item"><img src="surgimientodelfeudalismo.png" alt="surgimientodelfeudalismo"></div>
+        <div class="grid-item"><a href="surgimiento del feudalismo.html"><img src="surgimientodelfeudalismo.png" alt="Enlace a surgimiento del feudalismo.html"></a></div>
+        <div class="grid-item"><a href="hell.html"><img src="economiafeudal.png" alt="Enlace a hell.html"></a></div>
+        <div class="grid-item"><a href="hell.html"><img src="FFP.png" alt="Enlace a hell.html"></a></div>
+        <div class="grid-item"><a href="hell.html"><img src="sociedad feudal.png" alt="Enlace a hell.html"></a></div>
     </div>
 
 </body>
