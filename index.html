@@ -28,6 +28,10 @@
         }
 
         /* Estilo de las imágenes */
+        .grid-item figure {
+            margin: 0; /* Elimina el margen del figure */
+        }
+
         .grid-item img {
             width: 100%; /* Ajusta el ancho al 100% del contenedor */
             height: auto;
@@ -65,15 +69,51 @@
                 max-width: 100%; /* Asegura que las imágenes no sobrepasen el contenedor */
             }
         }
+
+        /* Estilo para el texto debajo de cada imagen */
+        figcaption {
+            text-align: center; /* Centra el texto */
+            font-size: 16px; /* Tamaño de fuente */
+            margin-top: 8px; /* Espacio entre la imagen y el texto */
+            color: #333; /* Color del texto */
+        }
     </style>
 </head>
 <body>
 
     <div class="grid-container">
-        <div class="grid-item"><a href="surgimiento del feudalismo.html"><img src="surgimientodelfeudalismo.png" alt="Enlace a surgimiento del feudalismo"></a></div>
-        <div class="grid-item"><a href="hell.html"><img src="economiafeudal.png" alt="Enlace a hell"></a></div>
-        <div class="grid-item"><a href="hell.html"><img src="FFP.png" alt="Enlace a hell"></a></div>
-        <div class="grid-item"><a href="hell.html"><img src="sociedad feudal.png" alt="Enlace a hell"></a></div>
+        <div class="grid-item">
+            <a href="surgimiento del feudalismo.html">
+                <figure>
+                    <img src="surgimientodelfeudalismo.png" alt="Enlace a surgimiento del feudalismo">
+                    <figcaption>Surgimiento del Feudalismo</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="hell.html">
+                <figure>
+                    <img src="economiafeudal.png" alt="Enlace a hell">
+                    <figcaption>Economía Feudal</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="hell.html">
+                <figure>
+                    <img src="FFP.png" alt="Enlace a hell">
+                    <figcaption>Señorío feudal</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="hell.html">
+                <figure>
+                    <img src="sociedad feudal.png" alt="Enlace a hell">
+                    <figcaption>Sociedad Feudal</figcaption>
+                </figure>
+            </a>
+        </div>
     </div>
 
 </body>
