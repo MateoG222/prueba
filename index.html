@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+    <title>Tienda con Animación en Imágenes</title>
     <style>
-                        /* Fondo por defecto para pantallas grandes */
-                        body {
-                background-image: url('Fondo.png')
+        /* Fondo por defecto para pantallas grandes */
+        body {
+            background-image: url('Fondo.png');
         }
 
         /* Fondo para pantallas móviles */
         @media only screen and (max-width: 768px) {
             body {
-                background-image: url('Fondo1.png')
+                background-image: url('Fondo1.png');
             }
         }
-         /* Contenedor de la cuadrícula */
-         .grid-container {
+
+        /* Contenedor de la cuadrícula */
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-            gap: 30px; /* Aumentar el espacio entre las imágenes */
-            max-width: 800px; /* Ajusta el tamaño máximo */
+            grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
+            gap: 30px; /* Espacio entre las imágenes */
+            max-width: 800px; /* Ajuste el tamaño máximo */
             margin: 0 auto;
             padding: 20px;
         }
@@ -46,8 +47,22 @@
         /* Animación que hace que las imágenes suban y aparezcan */
         @keyframes slideUp {
             to {
-                opacity: 1;          /* Aparecen completamente */
+                opacity: 1; /* Aparecen completamente */
                 transform: translateY(0); /* Se posicionan en su lugar */
+            }
+        }
+
+        /* Cambios para pantallas móviles */
+        @media only screen and (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; /* Una sola columna en móviles */
+                gap: 15px; /* Reduce el espacio entre las imágenes */
+                max-width: 100%; /* Utiliza el 100% del ancho de la pantalla */
+                padding: 10px;
+            }
+
+            .grid-item img {
+                max-width: 100%; /* Asegura que las imágenes no sobrepasen el contenedor */
             }
         }
     </style>
@@ -55,10 +70,10 @@
 <body>
 
     <div class="grid-container">
-        <div class="grid-item"><a href="surgimiento del feudalismo.html"><img src="surgimientodelfeudalismo.png" alt="Enlace a surgimiento del feudalismo.html"></a></div>
-        <div class="grid-item"><a href="hell.html"><img src="economiafeudal.png" alt="Enlace a hell.html"></a></div>
-        <div class="grid-item"><a href="hell.html"><img src="FFP.png" alt="Enlace a hell.html"></a></div>
-        <div class="grid-item"><a href="hell.html"><img src="sociedad feudal.png" alt="Enlace a hell.html"></a></div>
+        <div class="grid-item"><a href="surgimiento del feudalismo.html"><img src="surgimientodelfeudalismo.png" alt="Enlace a surgimiento del feudalismo"></a></div>
+        <div class="grid-item"><a href="hell.html"><img src="economiafeudal.png" alt="Enlace a hell"></a></div>
+        <div class="grid-item"><a href="hell.html"><img src="FFP.png" alt="Enlace a hell"></a></div>
+        <div class="grid-item"><a href="hell.html"><img src="sociedad feudal.png" alt="Enlace a hell"></a></div>
     </div>
 
 </body>
