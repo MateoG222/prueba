@@ -45,10 +45,10 @@
 
     <h1>Tienda de Productos</h1>
     <div class="grid-container">
-        <div class="grid-item"><img src="FFP.png" alt="FFP"></div>
-        <div class="grid-item"><img src="economiafeudal.png" alt="economiafeudal"></div>
-        <div class="grid-item"><img src="sociedad feudal.png" alt="sociedad feudal"></div>
-        <div class="grid-item"><img src="surgimientodelfeudalismo.png" alt="surgimientodelfeudalismo"></div>
+        <div class="grid-item"><img src="producto1.jpg" alt="Producto 1"></div>
+        <div class="grid-item"><img src="producto2.jpg" alt="Producto 2"></div>
+        <div class="grid-item"><img src="producto3.jpg" alt="Producto 3"></div>
+        <div class="grid-item"><img src="producto4.jpg" alt="Producto 4"></div>
     </div>
 
 </body>
